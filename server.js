@@ -60,7 +60,7 @@ app.use('/api/v1/users',authenticateUser, userRouter);
   is b/c the front end still needs to use our back end. The above code will still be 
   used for all of the get routes */
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './public', 'index.html'));
+  res.sendFile(path.resolve(__dirname, './client/dist', 'index.html'));
 })
 
 // not found
