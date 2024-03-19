@@ -5216,9 +5216,11 @@ try {
   const jsonJobs = JSON.parse(
     await readFile(new URL('./utils/mockData.json', import.meta.url))
   );
+
   const jobs = jsonJobs.map((job) => {
     return { ...job, createdBy: user._id };
   });
+
   await Job.deleteMany({ createdBy: user._id });
   await Job.create(jobs);
   console.log('Success!!!');
@@ -5303,6 +5305,7 @@ export const showStats = async (req, res) => {
     { $sort: { '_id.year': -1, '_id.month': -1 } },
     { $limit: 6 },
   ]);
+  
   monthlyApplications = monthlyApplications
     .map((item) => {
       const {

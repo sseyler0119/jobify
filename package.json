@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "setup-project": "npm i && cd client && npm i",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "watch": "node --watch server.js "
+    "server": "nodemon server.js",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
