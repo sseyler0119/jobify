@@ -22,6 +22,6 @@ const AreaChartComponent = ({data}) => {
   </ResponsiveContainer>;
 };
 AreaChartComponent.propTypes = {
-  data: propTypes.object,
+  data: propTypes.array,
 };
 export default AreaChartComponent;

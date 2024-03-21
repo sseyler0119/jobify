@@ -16,6 +16,6 @@ const ChartContainer = ({data}) => {
   </Wrapper>;
 };
 ChartContainer.propTypes ={
-    data: propTypes.object
+    data: propTypes.array
 }
 export default ChartContainer;

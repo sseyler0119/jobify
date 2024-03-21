@@ -21,6 +21,6 @@ const BarChartComponent = ({data}) => {
   </ResponsiveContainer>;
 };
 BarChartComponent.propTypes = {
-  data: propTypes.object
+  data: propTypes.array
 }
 export default BarChartComponent;
